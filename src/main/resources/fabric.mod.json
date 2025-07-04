@@ -8,10 +8,10 @@
 		"Me!"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/MattKarmelich",
+		"sources": "https://github.com/MattKarmelich/ThrowAnything"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/throwanything/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"net.mkarmelich.throwanything.ThrowAnythingModDataGenerator"
+		],
+		"client": [
+			"net.mkarmelich.throwanything.ThrowAnythingModClient"
 		]
 	},
 	"mixins": [
