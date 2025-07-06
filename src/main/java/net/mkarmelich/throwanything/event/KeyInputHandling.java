@@ -16,7 +16,10 @@ public class KeyInputHandling {
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(minecraftClient -> {
             if(throwingKey.isPressed()) {
-                minecraftClient.player.sendMessage(Text.of("This is an item"), true);
+                assert minecraftClient.player != null;
+                String item = minecraftClient.player.getStackInHand(minecraftClient.player.getActiveHand()).toString();
+
+                if(!item.isEmpty()) minecraftClient.player.sendMessage(Text.of("This is a " + item), true);
             }
         });
     }
